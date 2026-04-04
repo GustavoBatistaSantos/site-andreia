@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioInclusiva | Ensino de Biologia & TEA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Bio<span>Inclusiva</span></div>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#introdução">Introdução</a></li>
+                <li><a href="#estrategias">Estratégias</a></li>
+                <li><a href="#sistemas">Sistemas</a></li>
+                <li><a href="#videos">Vídeos</a></li>
+                <li><a href="#downloads">Downloads</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>Ensino de Biologia Adaptado para TEA</h1>
+        <p>Recursos práticos sobre Sistemas do Corpo Humano focados em previsibilidade e estímulo visual.</p>
+        <div class="hero-btns">
+        <a href="#sistemas" class="btn-main">Explorar Materiais</a>
+        <a href="#introdução" class="btn-main">Sobre a plataforma</a>
+    </div>
+    </section>
+    <section id ="introdução" class="container">
+        <h2 class="section-title">Bioinclusiva</h2>
+        <div class="tab-content active">
+            <p>O BioInclusiva nasce como uma ferramenta de apoio especializado para professores de Biologia que buscam transformar a inclusão em prática real. Vinculada ao Mestrado Profissional em Tecnologias Educacionais em Rede da UFSM–RS, nossa plataforma oferece suporte pedagógico focado no ensino de Ciências e Biologia para alunos com Transtorno do Espectro Autista (TEA). Nosso objetivo é garantir que o planejamento docente seja mais assertivo, promovendo a equidade educacional e simplificando a adaptação de conteúdos complexos através de materiais científicos, vídeos e atividades práticas gratuitas.</p>
+        </div>
+    </section>
+    <section id="estrategias" class="container">
+        <h2 class="section-title">Estratégias Pedagógicas</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Objetividade</h3>
+                <p>Linguagem direta, sem metáforas, focada na função real dos órgãos.</p>
+            </div>
+            <div class="card">
+                <h3>Apoio Visual</h3>
+                <p>Uso de pictogramas e cores para diferenciar sistemas complexos.</p>
+            </div>
+            <div class="card">
+                <h3>Rotina</h3>
+                <p>Estruturação de passos claros para cada atividade prática.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sistemas" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Sistemas do Corpo Humano</h2>
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'esqueleto')">Esquelético</button>
+                <button class="tab-btn" onclick="openTab(event, 'respiratorio')">Respiratório</button>
+                <button class="tab-btn" onclick="openTab(event, 'digestorio')">Digestório</button>
+            </div>
+
+            <div id="esqueleto" class="tab-content active">
+                <h3>🦴 Sistema Esquelético</h3>
+                <p><strong>Atividade:</strong> Montagem de esqueleto com cotonetes ou massa de modelar.</p>
+                <p><strong>Dica TEA:</strong> Use o toque para identificar os ossos no próprio corpo do aluno (aprendizado proprioceptivo).</p>
+            </div>
+
+            <div id="respiratorio" class="tab-content">
+                <h3>🫁 Sistema Respiratório</h3>
+                <p><strong>Atividade:</strong> Experimento da garrafa PET com balões para simular o pulmão.</p>
+                <p><strong>Dica TEA:</strong> Use penas ou papéis leves para visualizar a saída do ar (estímulo visual concreto).</p>
+            </div>
+
+            <div id="digestorio" class="tab-content">
+                <h3>🍎 Sistema Digestório</h3>
+                <p><strong>Atividade:</strong> Quebra-cabeça sequencial: da boca ao estômago.</p>
+                <p><strong>Dica TEA:</strong> Utilize cartões de rotina alimentar para explicar o caminho do alimento.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos" class="container">
+        <h2 class="section-title">Vídeos Explicativos (YouTube)</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-responsive">
+                    <iframe src="https://youtube.com" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h4>O Sistema Esquelético</h4>
+                <p>Animação simplificada sobre a função dos ossos.</p>
+            </div>
+            <div class="video-card">
+                <div class="video-responsive">
+                    <iframe src="https://youtube.com" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h4>Como Respiramos?</h4>
+                <p>Visualização do trajeto do ar de forma objetiva.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="downloads" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Materiais para Baixar (PDF)</h2>
+            <div class="download-list">
+                <div class="download-item">
+                    <span class="icon">📄</span>
+                    <div class="info">
+                        <strong>Guia de Adaptação Curricular</strong>
+                        <p>Estratégias para adaptar aulas de ciências para TEA.</p>
+                    </div>
+                    <a href="#" class="btn-download">Baixar PDF</a>
+                </div>
+                
+                <div class="download-item">
+                    <span class="icon">🧩</span>
+                    <div class="info">
+                        <strong>Flashcards: Órgãos do Corpo</strong>
+                        <p>Cartões visuais prontos para impressão e plastificação.</p>
+                    </div>
+                    <a href="#" class="btn-download">Baixar PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 BioInclusiva - Materiais de Apoio ao Professor.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
