@@ -273,25 +273,85 @@ footer {
 }
 
 /* Mobile */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
+/* --- AJUSTES DE RESPONSIVIDADE --- */
 
-    nav ul {
-        margin-top: 15px;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
+/* Esconde o checkbox e o ícone no PC */
+#menu-check, .menu-icon {
+    display: none;
 }
 
-/* Ajuste para Mobile (Celular) */
-@media (max-width: 480px) {
-    .hero-btns {
-        flex-direction: column; /* No celular, eles voltam a ficar um sobre o outro */
-        gap: 10px;
+@media (max-width: 768px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    /* Estilização do ícone hambúrguer */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        position: relative;
+        user-select: none;
+    }
+
+    .menu-icon span, .menu-icon span::before, .menu-icon span::after {
+        background-color: white;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background-color .2s ease-out;
+        width: 25px;
+    }
+
+    .menu-icon span::before, .menu-icon span::after {
+        content: "";
+        position: absolute;
+        transition: all .2s ease-out;
+    }
+
+    .menu-icon span::before { top: 8px; }
+    .menu-icon span::after { top: -8px; }
+
+    /* Transformando a lista em um menu suspenso */
+    nav ul {
+        display: none; /* Escondido por padrão */
+        flex-direction: column;
+        background: #2c3e50;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    }
+
+    nav ul li {
+        width: 100%;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 20px;
         width: 100%;
     }
+
+    /* O SEGREDO: Quando o checkbox é marcado, o menu aparece */
+    #menu-check:checked ~ ul {
+        display: flex;
+    }
+
+    /* Animação do ícone para virar um "X" quando aberto */
+    #menu-check:checked ~ .menu-icon span { background: transparent; }
+    #menu-check:checked ~ .menu-icon span::before { transform: rotate(-45deg); top: 0; }
+    #menu-check:checked ~ .menu-icon span::after { transform: rotate(45deg); top: 0; }
+
+    /* Ajustes extras para Mobile */
+    .hero h1 { font-size: 1.8rem; }
+    .hero-btns { flex-direction: column; gap: 10px; width: 100%; padding: 0 40px; }
+    .btn-main { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .section-title { font-size: 1.5rem; }
 }
