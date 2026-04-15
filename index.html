@@ -169,22 +169,47 @@
     </section>
 
     <section id="videos" class="container">
-        <h2 class="section-title">Vídeos Explicativos (YouTube)</h2>
-        <div class="video-grid">
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/qz-sxIKJitU?si=7Uo-tT7vlQ4ARN0q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h2 class="section-title">Vídeos Explicativos</h2>
+        <div class="tabs">
+            <button class="tab-btn-video active" onclick="openVideoTab(event, 'v-esqueletico')">Esquelético</button>
+            <button class="tab-btn-video" onclick="openVideoTab(event, 'v-cardiovascular')">Cardiovascular</button>
+            <button class="tab-btn-video" onclick="openVideoTab(event, 'v-respiratorio')">Respiratório</button>
+            <button class="tab-btn-video" onclick="openVideoTab(event, 'v-digestorio')">Digestório</button>
+            <button class="tab-btn-video" onclick="openVideoTab(event, 'v-nervoso')">Nervoso</button>
+        </div>
+
+        <div id="v-esqueletico" class="tab-content-video active" style="display: block;">
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-responsive">
+                        <iframe src="https://www.youtube.com/embed/qz-sxIKJitU" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h4>O Sistema Esquelético</h4>
                 </div>
-                <h4>O Sistema Esquelético</h4>
-                <p>Animação simplificada sobre a função dos ossos.</p>
             </div>
-            <div class="video-card">
-                <div class="video-responsive">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KjCvdDeXDvU?si=EW7ImHy3wYJif-A2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div id="v-cardiovascular" class="tab-content-video">
+            <div class="video-grid"><p>Vídeo do Sistema Cardiovascular em breve.</p></div>
+        </div>
+
+        <div id="v-respiratorio" class="tab-content-video">
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-responsive">
+                        <iframe src="https://www.youtube.com/embed/KjCvdDeXDvU" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h4>Como Respiramos?</h4>
                 </div>
-                <h4>Como Respiramos?</h4>
-                <p>Visualização do trajeto do ar de forma objetiva.</p>
             </div>
+        </div>
+
+        <div id="v-digestorio" class="tab-content-video">
+            <div class="video-grid"><p>Vídeo do Sistema Digestório em breve.</p></div>
+        </div>
+
+        <div id="v-nervoso" class="tab-content-video">
+            <div class="video-grid"><p>Vídeo do Sistema Nervoso em breve.</p></div>
         </div>
     </section>
 
