@@ -260,20 +260,78 @@ footer {
     to { opacity: 1; }
 }
 
-/* --- AJUSTES DE RESPONSIVIDADE --- */
+/* --- AJUSTES DE RESPONSIVIDADE (MODIFICADO) --- */
 
 #menu-check, .menu-icon {
     display: none;
 }
 
 @media (max-width: 768px) {
-    nav { padding: 0 20px; }
+    nav { 
+        padding: 0 20px; 
+    }
 
     .menu-icon {
         display: block;
         cursor: pointer;
         padding: 10px;
+        z-index: 1001;
+    }
+
+    /* Criando as 3 linhas do hambúrguer */
+    .menu-icon span, 
+    .menu-icon span::before, 
+    .menu-icon span::after {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: white;
         position: relative;
-        user-select: none;
+        transition: 0.3s;
+    }
+    .menu-icon span::before { top: 8px; }
+    .menu-icon span::after { bottom: 11px; }
+
+    /* Menu em formato de gaveta lateral */
+    nav ul {
+        display: block; 
+        position: fixed;
+        top: 60px;
+        right: -100%; /* Escondido */
+        background: #2c3e50;
+        width: 70%;
+        height: 100vh;
+        transition: 0.4s;
+        padding-top: 50px;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    }
+
+    nav ul li {
+        margin: 25px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1.1rem;
+        display: block;
+    }
+
+    /* Abrir menu quando clicar */
+    #menu-check:checked ~ ul {
+        right: 0;
+    }
+
+    /* Transformar hambúrguer em X */
+    #menu-check:checked ~ .menu-icon span {
+        background: transparent;
+    }
+    #menu-check:checked ~ .menu-icon span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    #menu-check:checked ~ .menu-icon span::after {
+        transform: rotate(-45deg);
+        bottom: 3px;
     }
 }
