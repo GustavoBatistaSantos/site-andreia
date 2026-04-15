@@ -84,6 +84,8 @@
                 <button class="tab-btn active" onclick="openTab(event, 'esqueleto')">Esquelético</button>
                 <button class="tab-btn" onclick="openTab(event, 'respiratorio')">Respiratório</button>
                 <button class="tab-btn" onclick="openTab(event, 'digestorio')">Digestório</button>
+                <button class="tab-btn" onclick="openTab(event, 'cardiovascular')">Cardiovascular</button>
+                <button class="tab-btn" onclick="openTab(event, 'nervoso')">Nervoso</button>
             </div>
 
             <div id="esqueleto" class="tab-content active">
@@ -165,6 +167,11 @@
                 </ul></p>
             </div>
         </div>
+
+        <div id="cardiovascular" class="tab-content active">
+            <p>em breve</p>
+        </div>
+        <div id="nervoso" class="tab-content active">em breve</div>
     </section>
 
     <section id="videos" class="container">
@@ -175,6 +182,7 @@
             <button class="tab-btn-video" onclick="openVideoTab(event, 'v-respiratorio')">Respiratório</button>
             <button class="tab-btn-video" onclick="openVideoTab(event, 'v-digestorio')">Digestório</button>
             <button class="tab-btn-video" onclick="openVideoTab(event, 'v-nervoso')">Nervoso</button>
+            <button class="tab-btn-video" onclick="openVideoTab(event, 'v-interação')">Interação entre sistemas</button>
         </div>
 
         <div id="v-esqueletico" class="tab-content-video active" style="display: block;">
@@ -189,26 +197,66 @@
         </div>
 
         <div id="v-cardiovascular" class="tab-content-video">
-            <div class="video-grid"><p>Vídeo do Sistema Cardiovascular em breve.</p></div>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-responsive">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xbigwDRtFwo?si=ey-TkX4I8xq0gjOd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h4>Sistema Circulatório</h4><br>
+                    <div class="video-responsive">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/j-shOXl1ojw?si=epgi1t65WInpNb7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h4>Sistema Circulatório/Cardiovascular- Divertido-Ensino Fundamental</h4><br>
+                    <div class="video-responsive">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/j5L5oGsWaxA?si=dYfMm9E0LnEliLAO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h4>Sistema Cardiovascular - a parceria entre pulmões e coração</h4><br>
+                </div>
+            </div>
         </div>
 
         <div id="v-respiratorio" class="tab-content-video">
             <div class="video-grid">
                 <div class="video-card">
                     <div class="video-responsive">
-                        <iframe src="https://www.youtube.com/embed/KjCvdDeXDvU" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/TPnH9ehyO0I?si=gL9hw-R0oO5FXAE1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
-                    <h4>Como Respiramos?</h4>
+                    <h4>Como Você Respira 👃 – História Animada</h4><br>
+                    <div class="video-responsive">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_tWUEsqdxKo?si=VY9EzW9QbwnOPgOG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h4>A Jornada do Oxigênio Através do Corpo Humano</h4>
                 </div>
             </div>
         </div>
 
         <div id="v-digestorio" class="tab-content-video">
-            <div class="video-grid"><p>Vídeo do Sistema Digestório em breve.</p></div>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-responsive">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZtgcWbcIWy4?si=H0jGWrJGkT0z1icT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h4>Uma Jornada Dentro Do Corpo Humano</h4><br>
+                    <div class="video-responsive">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/6EZFMMvVsEw?si=p6BUCLx5IqDeL4KZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h4>Sistema Digestório</h4><br>
+                </div>
+            </div>
         </div>
 
         <div id="v-nervoso" class="tab-content-video">
             <div class="video-grid"><p>Vídeo do Sistema Nervoso em breve.</p></div>
+        </div>
+
+        <div id="v-interação" class="tab-content-video ">
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-responsive">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dcgg9dsgX7c?si=mgGsUD4pPdlyG8VB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h4>A INTERAÇÃO DOS SISTEMAS DIGESTÓRIO E RESPIRATÓRIO</h4><br>
+            </div>
         </div>
     </section>
 
