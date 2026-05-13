@@ -1,8 +1,15 @@
-/* Reset e Configurações Gerais */
+/* =========================================
+RESET E CONFIGURAÇÕES GERAIS
+========================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -10,10 +17,12 @@ body {
     line-height: 1.8;
     color: #1a252f;
     background-color: #f4f7f6;
-    scroll-behavior: smooth;
 }
 
-/* Navegação */
+/* =========================================
+HEADER E NAVEGAÇÃO
+========================================= */
+
 header {
     background: #2c3e50;
     color: white;
@@ -22,7 +31,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 
 nav {
@@ -35,7 +44,7 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 
@@ -46,103 +55,121 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
+    gap: 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 0 15px;
+    padding: 10px 12px;
     font-weight: bold;
-    transition: color 0.2s ease;
+    border-radius: 6px;
+    transition: 0.25s ease;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
+    background: rgba(255,255,255,0.12);
     color: #3498db;
-    outline: 2px solid #3498db;
-    outline-offset: 4px;
 }
 
-/* Hero Section */
+/* =========================================
+HERO
+========================================= */
+
 .hero {
-    height: 70vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('hero-bg.png');
+    min-height: 75vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.70)),
+        url('hero-bg.png');
     background-size: cover;
     background-position: center;
     color: white;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
-    padding: 0 20px;
-    margin-top: 60px;
+    padding: 120px 20px 80px;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    letter-spacing: 0.5px;
+    font-size: 3rem;
+    margin-bottom: 18px;
+    max-width: 900px;
+}
+
+.hero p {
+    max-width: 750px;
+    font-size: 1.1rem;
 }
 
 .hero-btns {
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
 }
 
 .btn-main {
-    background: #2980b9;
+    background: #3498db;
     color: white;
-    padding: 15px 30px;
+    padding: 14px 28px;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: bold;
-    display: inline-block;
     border: none;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: 0.25s ease;
 }
 
-.btn-main:hover,
-.btn-main:focus {
-    background: #1f618d;
-    outline: 3px solid #3498db;
+.btn-main:hover {
+    background: #21618c;
+    transform: translateY(-2px);
 }
 
-/* Estrutura de Conteúdo */
+/* =========================================
+ESTRUTURA
+========================================= */
+
 .container {
     max-width: 1100px;
-    margin: 80px auto;
+    margin: 90px auto;
     padding: 0 20px;
+}
+
+.bg-light {
+    background: #e9f0f5;
+    padding: 60px 0;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     color: #2c3e50;
+    font-size: 2rem;
 }
 
 .section-title::after {
     content: '';
-    background: #3498db;
+    width: 70px;
     height: 4px;
-    width: 60px;
+    background: #3498db;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.bg-light {
-    background: #e9f0f5;
-    padding: 50px 0;
-}
+/* =========================================
+CARDS
+========================================= */
 
-/* Cards de Estratégias */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -152,13 +179,13 @@ nav ul li a:focus {
 .card {
     background: white;
     padding: 30px;
-    border-radius: 8px;
-    border-top: 6px solid #2980b9;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    border-top: 6px solid #3498db;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 .card h3 {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     color: #2c3e50;
 }
 
@@ -166,139 +193,93 @@ nav ul li a:focus {
     margin-bottom: 12px;
 }
 
-/* Abas (Tabs) */
+/* =========================================
+ABAS
+========================================= */
+
 .tabs {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
+    margin-bottom: 30px;
 }
 
-.tab-btn {
-    padding: 14px 28px;
-    cursor: pointer;
-    border: 2px solid transparent;
+.tab-btn,
+.tab-btn-video {
+    padding: 13px 24px;
+    border: none;
+    border-radius: 8px;
     background: #dcdde1;
     color: #2c3e50;
+    cursor: pointer;
     font-weight: bold;
-    border-radius: 6px;
-    transition: all 0.2s ease;
+    transition: 0.25s ease;
 }
 
-.tab-btn:hover {
-    background: #b2bec3;
+.tab-btn:hover,
+.tab-btn-video:hover {
+    background: #c5ced6;
 }
 
-.tab-btn.active {
-    background: #2c3e50;
+.tab-btn.active,
+.tab-btn-video.active {
+    background: #3498db;
     color: white;
-    border-color: #3498db;
 }
 
-/* Conteúdo das Abas */
-.tab-content {
+/* =========================================
+CONTEÚDOS DAS ABAS
+========================================= */
+
+.tab-content,
+.tab-content-video {
     display: none;
     background: white;
     padding: 35px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    animation: fadeIn 0.4s ease;
 }
 
-.tab-content.active {
+.tab-content.active,
+.tab-content-video.active {
     display: block;
 }
 
 .tab-content h3 {
     margin-bottom: 20px;
-    font-size: 1.4rem;
 }
 
 .tab-content p {
     margin-bottom: 15px;
 }
 
-.tab-content ul, .tab-content ol {
+.tab-content ul,
+.tab-content ol {
     margin-left: 25px;
     margin-bottom: 20px;
 }
 
 .tab-content li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
-.tab-btn, .tab-btn-video {
-    padding: 12px 25px;
-    cursor: pointer;
-    border: none;
-    background: #ddd;
-    margin: 5px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: 0.3s;
-}
+/* =========================================
+QUIZ
+========================================= */
 
-.tab-btn.active, .tab-btn-video.active {
-    background: #3498db;
-    color: white;
-}
-
-/* Conteúdo das Abas */
-.tab-content, .tab-content-video {
-    display: none;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    animation: fadeIn 0.5s;
-}
-
-.tab-content.active, .tab-content-video.active {
-    display: block;
-}
-
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-}
-
-.video-card {
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.video-responsive {
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    height: 0;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.video-responsive iframe {
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
-
-/* --- ESTILOS DO QUIZ --- */
 .quiz-container {
     background: #f8fafc;
     border: 2px dashed #3498db;
-    border-radius: 8px;
-    padding: 20px;
+    border-radius: 10px;
+    padding: 22px;
     margin-top: 35px;
 }
 
 .quiz-container h4 {
+    margin-bottom: 12px;
     color: #2c3e50;
-    margin-bottom: 10px;
 }
 
 .quiz-pergunta {
@@ -309,19 +290,18 @@ nav ul li a:focus {
 .quiz-opcoes {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 .quiz-opt {
     background: white;
     border: 2px solid #cbd5e1;
-    border-radius: 6px;
-    padding: 12px 20px;
+    border-radius: 8px;
+    padding: 14px 20px;
     text-align: left;
-    font-size: 1rem;
     cursor: pointer;
-    font-family: inherit;
-    transition: background-color 0.2s;
+    transition: 0.2s ease;
+    font-size: 1rem;
 }
 
 .quiz-opt:hover {
@@ -344,69 +324,217 @@ nav ul li a:focus {
 .quiz-feedback {
     margin-top: 15px;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
-/* --- ESTILOS DO JOGO DA MEMÓRIA --- */
+/* =========================================
+VÍDEOS
+========================================= */
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.video-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    transition: 0.2s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-3px);
+}
+
+.video-card h4 {
+    padding: 15px;
+    color: #2c3e50;
+}
+
+.video-responsive {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    background: black;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* =========================================
+DOWNLOADS
+========================================= */
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.download-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+
+    border-left: 6px solid #3498db;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    transition: 0.25s ease;
+
+    flex-wrap: wrap;
+}
+
+.download-item:hover {
+    transform: translateY(-3px);
+}
+
+.download-item .icon {
+    font-size: 2rem;
+}
+
+.download-item .info {
+    flex: 1;
+    min-width: 240px;
+}
+
+.download-item .info strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #2c3e50;
+}
+
+.btn-download {
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.btn-download:hover {
+    background: #21618c;
+}
+
+/* =========================================
+JOGO DA MEMÓRIA
+========================================= */
+
 .memoria-controle {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .memoria-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 15px;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 850px;
+    margin: auto;
 }
 
 .carta {
     height: 140px;
     background: #2c3e50;
     color: white;
-    border-radius: 8px;
-    cursor: pointer;
+
+    border-radius: 10px;
+
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
     text-align: center;
-    padding: 10px;
+
+    padding: 12px;
+
     font-weight: bold;
-    font-size: 0.95rem;
-    border: 3px solid transparent;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
     user-select: none;
-    transition: transform 0.2s, background-color 0.2s;
+
+    border: 3px solid transparent;
+}
+
+.carta:hover {
+    transform: scale(1.03);
 }
 
 .carta.virada {
     background: white;
     color: #2c3e50;
     border-color: #3498db;
-    transform: scale(1.02);
 }
 
 .carta.par-encontrado {
     background: #d1fae5;
-    color: #065f46;
     border-color: #10b981;
+    color: #065f46;
     cursor: default;
 }
+
+/* =========================================
+FOOTER
+========================================= */
 
 footer {
     text-align: center;
     padding: 40px;
     background: #2c3e50;
     color: white;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
-/* --- RESPONSIVIDADE --- */
-#menu-check, .menu-icon {
+/* =========================================
+ANIMAÇÃO
+========================================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+MENU MOBILE
+========================================= */
+
+#menu-check,
+.menu-icon {
     display: none;
 }
 
+/* =========================================
+RESPONSIVO
+========================================= */
+
 @media (max-width: 768px) {
+
     .menu-icon {
         display: block;
         cursor: pointer;
@@ -414,31 +542,42 @@ footer {
         z-index: 1001;
     }
 
-    .menu-icon span, 
-    .menu-icon span::before, 
+    .menu-icon span,
+    .menu-icon span::before,
     .menu-icon span::after {
         content: "";
         display: block;
-        width: 25px;
+        width: 26px;
         height: 3px;
         background: white;
         position: relative;
         transition: 0.3s;
     }
-    .menu-icon span::before { top: 8px; }
-    .menu-icon span::after { bottom: 11px; }
+
+    .menu-icon span::before {
+        top: 8px;
+    }
+
+    .menu-icon span::after {
+        bottom: 11px;
+    }
 
     nav ul {
-        display: block; 
+        display: block;
         position: fixed;
-        top: 60px;
-        right: -100%; 
-        background: #2c3e50;
-        width: 70%;
+        top: 72px;
+        right: -100%;
+
+        width: 75%;
         height: 100vh;
-        transition: 0.4s;
+
+        background: #2c3e50;
+
         padding-top: 50px;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+
+        transition: 0.35s ease;
+
+        box-shadow: -5px 0 15px rgba(0,0,0,0.25);
     }
 
     nav ul li {
@@ -453,12 +592,41 @@ footer {
     #menu-check:checked ~ .menu-icon span {
         background: transparent;
     }
+
     #menu-check:checked ~ .menu-icon span::before {
         transform: rotate(45deg);
         top: 0;
     }
+
     #menu-check:checked ~ .menu-icon span::after {
         transform: rotate(-45deg);
         bottom: 3px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .download-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-download {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tab-content,
+    .tab-content-video {
+        padding: 22px;
     }
 }
